@@ -37,8 +37,6 @@ describe('index.js', function () {
     const testObj = Object.assign({}, unmodifiedTestObj)
     const callback = (x) => (x * 3)
 
-
-
     it('successfully returns a correctly populated array', function () {
       const arrResult = fi.map(testArr, callback)
       expect(arraysEqual([3, 6, 9, 12], arrResult)).to.equal(true);
@@ -71,7 +69,7 @@ describe('index.js', function () {
 
     it('returns the correct reduced value when not passed an accumulator', function () {
       const reduceSansAcc = fi.reduce(testArr, callback)
-      expect(reduceSansAcc).to.equal(28)
+      expect(reduceSansAcc).to.equal(30)
     })
 
     it('does not modify the original array', function () {
